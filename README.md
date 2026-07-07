@@ -1,24 +1,30 @@
-Pathly — LMS Frontend (React)
-A Udemy-style learning management system frontend built with React, React Router, and Tailwind CSS. Frontend/navigation only — all data is mocked, no backend required.
+# Pathly — Learning Management System (Frontend)
 
-Getting started
-npm install
-npm run dev
-Then open the printed local URL (usually http://localhost:5173).
+Pathly is a Udemy-style Learning Management System frontend built with **React**, **React Router**, and **Tailwind CSS**. It's a frontend-only prototype — all course data is mocked, so it runs standalone with no backend or database required.
 
-To create a production build:
+The project demonstrates a full LMS navigation flow: browsing and filtering a course catalog, viewing detailed course pages with curriculum previews, adding courses to a cart, a mock checkout flow, a learner dashboard with progress tracking, and a simple in-browser course player. It also includes a separate instructor area with a dashboard, course management, a multi-section course creation form, and an analytics page.
 
-npm run build
-What's included
-Public catalog: Home page, course catalog with category/level/rating filters and search, course detail pages with curriculum preview
-Learner flow: Cart, mock checkout, "My Learning" dashboard with progress tracking, and a course player page with lecture completion
-Auth (mocked): Login / signup, no real backend — any email/password works
-Instructor area: Dashboard with stats, course list, a multi-section course creation form, and an analytics page
-Navigation: Sticky navbar with category dropdown, search, cart badge, and a user menu; a separate sidebar layout for the instructor section
-Structure
-src/
-  components/
-    layout/     Navbar, Footer, MainLayout, InstructorLayout
+## Features
+
+- 🏠 **Home** — hero section, category browsing, bestseller and recently-updated course rails
+- 🔍 **Course catalog** — search, and filter by category, level, and rating
+- 📄 **Course detail pages** — curriculum accordion, instructor info, pricing, related courses
+- 🛒 **Cart & checkout** — add-to-cart flow with a mock payment form
+- 🎓 **My Learning** — enrolled courses with progress bars
+- ▶️ **Course player** — lecture list with mark-as-complete and progress syncing
+- 🔐 **Auth (mocked)** — login/signup screens, no real backend
+- 👨‍🏫 **Instructor dashboard** — stats overview, course list, course creation form, analytics
+
+## Tech stack
+
+- React (Vite)
+- React Router
+- Tailwind CSS
+- lucide-react (icons)
+
+## Status
+
+This is a frontend-only prototype intended as a starting point — state is held in React Context (in-memory), and there's no real backend, authentication, or payment processing wired in yet.
     course/     CourseCard, StarRating, CurriculumAccordion
     ui/         Button, Badge
   context/      CartContext, AuthContext, EnrollmentContext
